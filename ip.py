@@ -9,4 +9,3 @@ print("Source IP    -------> Destination IP")
 for i in ips:
     print(i)
 
-        
