@@ -8,7 +8,6 @@ packets = rdpcap('cap.pcap')
 for packet in packets:
     if not packet.haslayer('HTTPRequest'):
         continue
-    http_layer= packet.getlayer('HTTPRequest').fields
     ip_layer = packet.getlayer('IP').fields
     path = packet.getlayer('HTTPRequest').Path
     domain = packet.getlayer('HTTPRequest').Host
